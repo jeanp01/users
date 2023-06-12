@@ -35,38 +35,38 @@ const ModalForm = ({
         }transition-opacity`}>
             
             <form onSubmit={handleSubmit(submit)} className="bg-white w-[280px] p-1 grid gap-1 relative align-center">
-                <h3 className="font-bold text-2xl">{isUserToUpdate? "Editar usuario" : "Nuevo usuario"}</h3>
+                <h3 className="font-bold text-3xl py-2">{isUserToUpdate? "Editar usuario" : "Nuevo usuario"}</h3>
 
                  {/* NOMBRE */}
-                <div className="grid gap-2">
+                <div className="grid gap-2 p-2">
                     <label htmlFor="font-bold text-sm">Nombre</label>
                     <input placeholder="Ingresa tu nombre..." className="bg-gray-100 outline-none p-1" type="text"
                     {...register("first_name")}/>
                 </div>
                 
                  {/* APELLIDO */}
-                <div className="grid gap-2">
+                <div className="grid gap-2 p-2">
                     <label htmlFor="font-bold text-sm">Apellidos</label>
                     <input placeholder="Ingresa tu apellido..." className="bg-gray-100 outline-none p-1" type="text" 
                     {...register("last_name")}/>
                 </div>
 
                  {/* CORREO */}
-                <div className="grid gap-2">
+                <div className="grid gap-2 p-2">
                     <label htmlFor="font-bold text-sm">Correo</label>
                     <input placeholder="Ingresa tu correo..." className="bg-gray-100 outline-none p-1" type="email"
                     {...register("email")} />
                 </div>
 
                  {/* CONTRASEÑA */}
-                <div className="grid gap-2">
+                <div className="grid gap-2 p-2">
                     <label htmlFor="font-bold text-sm">Contraseña</label>
                     <input placeholder="Ingresa tu contraseña..." className="bg-gray-100 outline-none p-1" type="password"
                     {...register("password")} />
                 </div>
 
                  {/* CUMPLEAÑOS */}
-                <div className="grid gap-2">
+                <div className="grid gap-2 p-2">
                     <label htmlFor="font-bold text-sm">Cumpleaños</label>
                     <input placeholder="Ingresa tu cumpleaños..." className="bg-gray-100 outline-none p-2" type="date"
                     {...register("birthday")} />
@@ -74,7 +74,7 @@ const ModalForm = ({
                 <button onClick={handleCloseModal} type="button" className="absolute top-2 right-2 text-2xl hover:text-secondary" ><i className='bx bxs-user-x'></i></button>
 
 
-                <button className="btn-primary">{isUserToUpdate? "Guardar cambios" : "Agregar nuevo usuario"}</button>
+                <button className="btn-primary p-2">{isUserToUpdate? "Guardar cambios" : "Agregar nuevo usuario"}</button>
             </form>
         </section>
     )
